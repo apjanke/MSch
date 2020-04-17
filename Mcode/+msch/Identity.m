@@ -1,6 +1,7 @@
 classdef Identity < handle
   
   properties (SetAccess = private, Hidden = true)
+    % The underlying com.jcraft.jsch.Identity Java object
     j
   end
   properties (Dependent)
@@ -11,12 +12,12 @@ classdef Identity < handle
   
   methods
     
-    function this = Identity(jIdentityRepository)
+    function this = Identity(jIdentity)
       if nargin == 0
         return
       end
-      mustBeA(jIdentityRepository, 'com.jcraft.jsch.IdentityRepository');
-      this.j = jIdentityRepository;
+      mustBeA(jIdentity, 'com.jcraft.jsch.Identity');
+      this.j = jIdentity;
     end
     
     function out = get.name(this)
@@ -36,7 +37,7 @@ classdef Identity < handle
     end
     
     function out = sign(this, data)
-      out = uint8(this.j.getSignature(data);
+      out = uint8(this.j.getSignature(data));
     end
     
     function out = setPassphrase(this, passphrase)
