@@ -3,6 +3,7 @@
 ## TODO / To decide
 
 * Should I ship Validatinator with MSch instead of using msch.internal.mustBe*?
+* Should I ship the dispstr library with MSch?
 
 ## Design stuff
 
