@@ -16,7 +16,7 @@ classdef Identity < handle
       if nargin == 0
         return
       end
-      mustBeA(jIdentity, 'com.jcraft.jsch.Identity');
+      msch.internal.mustBeA(jIdentity, 'com.jcraft.jsch.Identity');
       this.j = jIdentity;
     end
     

@@ -14,7 +14,7 @@ classdef IdentityRepository < handle
       if nargin == 0
         return
       end
-      mustBeA(jIdentityRepository, 'com.jcraft.jsch.IdentityRepository');
+      msch.internal.mustBeA(jIdentityRepository, 'com.jcraft.jsch.IdentityRepository');
       this.j = jIdentityRepository;
     end
     

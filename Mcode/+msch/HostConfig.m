@@ -15,7 +15,7 @@ classdef HostConfig < handle
       if nargin == 0
         return
       end
-      mustBeA(jHostConfig, 'com.jcraft.jsch.ConfigRepository.Config');
+      msch.internal.mustBeA(jHostConfig, 'com.jcraft.jsch.ConfigRepository.Config');
       this.j = jHostConfig;
     end
     

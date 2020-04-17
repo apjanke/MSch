@@ -24,7 +24,7 @@ classdef ConfigRepository < handle
       if nargin == 0
         return
       end
-      mustBeA(jConfigRepository, 'com.jcraft.jsch.ConfigRepository');
+      msch.internal.mustBeA(jConfigRepository, 'com.jcraft.jsch.ConfigRepository');
       this.j = jConfigRepository;
     end
     
