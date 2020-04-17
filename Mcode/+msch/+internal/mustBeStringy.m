@@ -13,5 +13,5 @@ function mustBeStringy(x)
 
 if ~isstring(x) && ~(ischar(x) && (isrow(x) || isempty(x))) && ~iscellstr(x)
   reportBadValue(valueName, 'string of some type', sprintf('%s %s',...
-      size2str(size(x)), class(x)));
+      msch.size2str(size(x)), class(x)));
 end

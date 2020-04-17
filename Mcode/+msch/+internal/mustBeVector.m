@@ -12,6 +12,6 @@ if isvector(x)
 end
 
 valueName = firstNonEmpty(name, inputname(1));
-reportBadValue(valueName, 'vector', size2str(size(x)));
+reportBadValue(valueName, 'vector', msch.size2str(size(x)));
 
 end

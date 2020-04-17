@@ -13,5 +13,5 @@ function mustBeString(x)
 
 if ~isstring(x)
   reportBadValue(valueName, 'string array', sprintf('%s %s',...
-      size2str(size(x)), class(x)));
+      msch.size2str(size(x)), class(x)));
 end

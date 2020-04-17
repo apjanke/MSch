@@ -13,6 +13,6 @@ if isscalar(x)
 end
 
 valueName = firstNonEmpty(name, inputname(1));
-reportBadValue(valueName, 'scalar', size2str(size(x)));
+reportBadValue(valueName, 'scalar', msch.size2str(size(x)));
 
 end

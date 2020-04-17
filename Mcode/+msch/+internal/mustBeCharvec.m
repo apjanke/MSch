@@ -15,5 +15,5 @@ mustBeA(x, 'char');
 if size(x,1) > 1 || ~ismatrix(x)
     valueName = firstNonEmpty(name, inputname(1));
     reportBadValue(valueName, 'single string as char', sprintf('%s %s',...
-        size2str(size(x)), class(x)));
+        msch.size2str(size(x)), class(x)));
 end

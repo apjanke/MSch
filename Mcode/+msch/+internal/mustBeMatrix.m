@@ -10,6 +10,6 @@ if ismatrix(x)
 end
 
 valueName = firstNonEmpty(name, inputname(1));
-reportBadValue(valueName, 'matrix', size2str(size(x)));
+reportBadValue(valueName, 'matrix', msch.size2str(size(x)));
 
 end
