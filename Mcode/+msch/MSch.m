@@ -95,8 +95,8 @@ classdef MSch < handle
       msch.internal.mustBeStringy(username);
       host = string(host);
       username = string(username);
-      mustBeScalar(host);
-      mustBeScalar(username);
+      msch.internal.mustBeScalar(host);
+      msch.internal.mustBeScalar(username);
       
       jSession = this.j.getSession(username, host, port);
       out = msch.Session(jSession, this);

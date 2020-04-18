@@ -65,7 +65,10 @@ switch type
 end
 
 % General case
-if ~isa2(value, type)
+% I haven't ported isa2() from Janklab yet, and we're not using pseudotypes, so
+% just use isa() for now
+%if ~isa2(value, type)
+if ~isa(value, type)
     reportBadValue(inputname(1), type, class(value));
 end
 
