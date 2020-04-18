@@ -1,6 +1,7 @@
 classdef ConfigRepository < handle
   
   properties (SetAccess = private, Hidden = true)
+    % The underlying com.jcraft.jsch.ConfigRepository Java object
     j
   end
   properties (Dependent)
