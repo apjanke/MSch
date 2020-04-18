@@ -13,6 +13,7 @@ javaLibDir = fullfile(tbxRootDir, 'lib', 'java');
 
 jars = {
   'jsch-0.1.55.jar'
+  'msch-support-0.1.0-SNAPSHOT.jar'
   };
 jarPaths = cellfun(@(x) {fullfile(javaLibDir, x)}, jars);
 currentJavaPath = [javaclasspath; javaclasspath('-static')];
