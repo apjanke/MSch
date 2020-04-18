@@ -5,6 +5,8 @@ It is built on top of the [JSch](http://www.jcraft.com/jsch/) Java Secure Channe
 
 MSch is pronounced "mush".
 
+This is a work in progress! It is not running yet.
+
 ## Requirements
 
 Matlab R2019b or newer.
