@@ -32,9 +32,9 @@ classdef Session < handle
     
     function disp(this)
       if isempty(this.j)
-        fprintf('msch.Session (null)');
+        fprintf('msch.Session (null)\n');
       else
-        fprintf('msch.Session: %s@%s (connected=%d)', ...
+        fprintf('msch.Session: %s@%s (connected=%d)\n', ...
           this.username, this.host, this.isConnected);
       end
     end

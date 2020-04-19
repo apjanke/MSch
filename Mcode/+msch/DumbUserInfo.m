@@ -1,7 +1,7 @@
 classdef DumbUserInfo < handle
   
   properties (SetAccess = private, Hidden)
-    j net.janke.msch.DumbUserInfo = net.janke.msch.DumbUserInfo
+    j = net.apjanke.msch.DumbUserInfo
   end
   properties (Dependent)
     password
@@ -31,12 +31,12 @@ classdef DumbUserInfo < handle
         else
           passphraseDisp = '*****';
         end
-        fprintf('%s: password=%s, passphrase=%s', class(this), ...
+        fprintf('%s: password=%s, passphrase=%s\n', class(this), ...
           passwordDisp, passphraseDisp);
       elseif isempty(this)
-        fprintf('%s empty %s', size2str(size(this)), class(this));
+        fprintf('%s empty %s\n', size2str(size(this)), class(this));
       else
-        fprintf('%s %s', size2str(size(this)), class(this));
+        fprintf('%s %s\n', size2str(size(this)), class(this));
       end
     end
     
