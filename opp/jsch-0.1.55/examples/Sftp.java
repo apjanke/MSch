@@ -56,21 +56,21 @@ public class Sftp{
 
       while(true){
         out.print("sftp> ");
-	cmds.removeAllElements();
+        cmds.removeAllElements();
         i=in.read(buf, 0, 1024);
-	if(i<=0)break;
+        if(i<=0)break;
 
         i--;
-        if(i>0 && buf[i-1]==0x0d)i--;
+        if(i>0 && buf[i-1]==0x0d) i--;
         //str=new String(buf, 0, i);
         //System.out.println("|"+str+"|");
-	int s=0;
-	for(int ii=0; ii<i; ii++){
+        int s=0;
+        for(int ii=0; ii<i; ii++){
           if(buf[ii]==' '){
             if(ii-s>0){ cmds.addElement(new String(buf, s, ii-s)); }
-	    while(ii<i){if(buf[ii]!=' ')break; ii++;}
-	    s=ii;
-	  }
+            while(ii<i){if(buf[ii]!=' ')break; ii++;}
+          s=ii;
+        }
 	}
 	if(s<i){ cmds.addElement(new String(buf, s, i-s)); }
 	if(cmds.size()==0)continue;
