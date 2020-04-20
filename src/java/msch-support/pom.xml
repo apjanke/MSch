@@ -12,11 +12,37 @@
   <name>msch-support</name>
   <url>http://github.com/apjanke/Msch</url>
 
+  <developers>
+    <developer>
+      <id>apjanke</id>
+      <name>Andrew Janke</name>
+      <email>floss@apjanke.net</email>
+      <roles>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
+
+  <!-- We need the snapshot repo to pick up Matlab-JUMP's snapshots. -->
+  <repositories>
+    <repository>
+      <id>oss.sonatype.org-snapshot</id>
+      <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
 
   <dependencies>
     <dependency>
