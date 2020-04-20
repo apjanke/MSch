@@ -10,6 +10,7 @@ public class DumbUserInfo implements UserInfo {
 
     private String password;
     private String passphrase;
+    private boolean debug = false;
 
     public DumbUserInfo() {
 
@@ -32,16 +33,25 @@ public class DumbUserInfo implements UserInfo {
 
     @Override
     public boolean promptPassword(String s) {
+        if (debug) {
+            System.out.println("promptPassword: " + s);
+        }
         return password != null;
     }
 
     @Override
     public boolean promptPassphrase(String s) {
+        if (debug) {
+            System.out.println("promptPassphrase: " + s);
+        }
         return passphrase != null;
     }
 
     @Override
     public boolean promptYesNo(String s) {
+        if (debug) {
+            System.out.println("promptYesNo: " + s);
+        }
         return false;
     }
 
@@ -58,4 +68,11 @@ public class DumbUserInfo implements UserInfo {
         this.passphrase = passphrase;
     }
 
+    public boolean isDebug() {
+        return debug;
+    }
+
+    public void setDebug(boolean debug) {
+        this.debug = debug;
+    }
 }

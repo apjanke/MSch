@@ -6,6 +6,7 @@ classdef DumbUserInfo < handle
   properties (Dependent)
     password
     passphrase
+    debug
   end
     
   methods
@@ -54,6 +55,14 @@ classdef DumbUserInfo < handle
     
     function set.password(this, val)
       this.j.setPassword(val);
+    end
+    
+    function out = get.debug(this)
+      out = string(this.j.isDebug);
+    end
+    
+    function set.debug(this, val)
+      this.j.setDebug(val);
     end
     
   end

@@ -25,7 +25,7 @@ classdef Session < handle
         return
       end
       msch.internal.mustBeA(jSession, 'com.jcraft.jsch.Session');
-      msch.internal.mustBeA(context, 'msch.MSch');
+      msch.internal.mustBeA(context, 'msch.Context');
       this.j = jSession;
       this.context = context;
     end

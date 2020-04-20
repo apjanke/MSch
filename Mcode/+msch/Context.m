@@ -1,7 +1,7 @@
-classdef MSch < handle
-  %MSch Central configuration point and factory for MSch stuff
+classdef Context < handle
+  %Context Central configuration point and factory for MSch stuff
   %
-  % An MSch object is the context from which all MSch sessions and stuff are
+  % An Context object is the context from which all MSch sessions and stuff are
   % made. It contains configuration, identity/authentication info, host keys,
   % and so on. It will be the first object you create when working with the MSch
   % library.
@@ -70,7 +70,7 @@ classdef MSch < handle
   
   methods
     
-    function this = MSch()
+    function this = Context()
       % Construct a new object
       this.j = com.jcraft.jsch.JSch;
     end
@@ -141,6 +141,14 @@ classdef MSch < handle
         disp(out);
         clear out
       end
+    end
+    
+    function loadHostKeysFromKnownHosts(this, file)
+      %loadHostKeysFromKnownHosts Load host keys from a known_hosts file
+      if nargin < 2 || isempty(file)
+        file = fullfile(getenv('HOME'), '.ssh', 'known_hosts');
+      end
+      this.j.setKnownHosts(file);
     end
     
   end
